@@ -1,11 +1,12 @@
 const express = require('express');
-
-require('./spreadsheet');
+const googleSheetRoutes = require('./routes/google.routes');
 
 const app = express();
 
-// routes
+// Middleware para parsear JSON
+app.use(express.json());
 
-app.use(require('./routes/google.routes'));
+// Rutas
+app.use('/api', googleSheetRoutes);
 
-module.exports=app;
+module.exports = app;
