@@ -3,7 +3,8 @@ const credenciales = require('./json/credenciales');
 
 let googleId = credenciales.googleId;
 
-async function accederGoogleSheet() {
+// Controlador para acceder a Google Sheets
+const accederGoogleSheet = async (req, res) => {
   try {
     // Crear una instancia del documento
     const documento = new GoogleSpreadsheet(googleId);
@@ -17,15 +18,16 @@ async function accederGoogleSheet() {
     // Acceder a la primera hoja de cálculo
     const sheet = documento.sheetsByIndex[0];
 
-    console.log(`Título de la hoja: ${sheet.title}`);
-    console.log(`Número de filas: ${sheet.rowCount}`);
+    res.json({
+      message: 'Hoja de cálculo cargada con éxito',
+      title: sheet.title,
+      rowCount: sheet.rowCount,
+    });
   } catch (error) {
     console.error('Error al acceder a Google Sheets:', error);
+    res.status(500).json({ error: 'Error al acceder a Google Sheets' });
   }
-}
-
-// Llamar a la función
-accederGoogleSheet();
+};
 
 module.exports = {
   accederGoogleSheet,
