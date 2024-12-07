@@ -5,7 +5,7 @@ let googleId = credenciales.googleId;
 
 async function accederGoogleSheet(){
 
-  const documento = new GoogleSpreadSheet(googleId);
+  const documento = new GoogleSpreadsheet(googleId);
 
   await documento.use.ServiceAccountAuth(credenciales);
 
