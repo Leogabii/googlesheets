@@ -22,4 +22,4 @@ const credenciales = {
     googleId: process.env.GOOGLE_ID
 };
 
-export default credenciales;
+module.exports= credenciales;
