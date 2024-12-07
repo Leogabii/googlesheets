@@ -7,7 +7,7 @@ async function accederGoogleSheet(){
 
   const documento = new GoogleSpreadsheet(googleId);
 
-  await documento.use.ServiceAccountAuth(credenciales);
+  await documento.useServiceAccountAuth(credenciales);
 
   await documneto.loadInfo();
 
