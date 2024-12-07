@@ -1,7 +1,9 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const credenciales = require('./json/credenciales');
+const googleID = require('./json/google.Id');
 
-let googleId = credenciales.googleId;
+
+let googleId = googleID;
 
 // Controlador para acceder a Google Sheets
 const accederGoogleSheet = async (req, res) => {
