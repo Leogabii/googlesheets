@@ -1,5 +1,5 @@
 const {GoogleSpreadsheet} = require ('google-spreadsheet');
-const credenciales = require('./json/credenciales");
+const credenciales = require('./json/credenciales');
 
 let googleId = credenciales.googleId;
 
