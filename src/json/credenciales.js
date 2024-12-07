@@ -1,10 +1,5 @@
 // spreadsheet.js
 
-const dotenv = require('dotenv');
-
-
-// Cargar variables de entorno
-dotenv.config();
 
 // Construir el objeto credenciales
 const credenciales = {
