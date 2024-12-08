@@ -2,7 +2,7 @@
 
 
 // Construir el objeto credenciales
-const credenciales = {
+module.exports = {
     type: process.env.TYPE,
     project_id: process.env.PROJECT_ID,
     private_key_id: process.env.PRIVATE_KEY_ID,
@@ -16,4 +16,4 @@ const credenciales = {
     universe_domain: process.env.UNIVERSE_DOMAIN
 };
 
-module.exports= credenciales;
+
